@@ -1,0 +1,48 @@
+'use strict';
+
+var fs        = require('fs');
+var path      = require('path');
+var Sequelize = require('sequelize');
+var env       = process.env.NODE_ENV || 'test';
+var basename  = path.basename(module.filename);
+var config    = require(__dirname + '/../config/config.json')[env];
+console.log(config);
+var db        = {};
+/*
+const Profilex = sequelize.define('user', {
+    username: {
+      type: Sequelize.STRING
+    },
+    about: {
+      type: Sequelize.STRING
+    }
+  });
+  
+  // force: true will drop the table if it already exists
+  User.sync({force: true}).then(() => {
+    // Table created
+    return User.create({
+      username: 'seth',
+      about: 'Im a coder'
+    });
+  });
+
+  // Application wide model option
+  const sequelize = new Sequelize('connectionUri', {
+    define: {
+      timestamps: false // true by default
+    }
+  });
+
+
+  // First query
+  Profilex.findAll().then(users => {
+    console.log(users)
+  })
+
+
+  // Correct User query
+  Profilex.findOne().then(user => {
+    console.log(user.get('username'));
+  });
+  */
