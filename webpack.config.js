@@ -10,8 +10,8 @@ module.exports =  {
     path.join(__dirname, '/client/index.js')
   ],
   output: {
-    path: '/',
-    publicPath: '/',
+    path: './',
+    publicPath: './',
     libraryTarget: 'umd',
     filename: "bundle.js",
     libraryName: 'PlacesAutocomplete'
