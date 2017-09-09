@@ -57,6 +57,7 @@ app.use('/', (req, res) => {
   res.sendFile(path.join(__dirname, './index.html'));
 });
 app.use('/bundle.js', (req, res) => {
+  console.log("eyyyyyyyyyyy")
   res.sendFile(path.join(__dirname, '../bundle.js'));
 });
 
