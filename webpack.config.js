@@ -1,9 +1,9 @@
-import path from 'path'
-import webpack from 'webpack';
+const path = require("path") 
+const webpack = require('webpack');
 
 
 
-export default {
+module.exports =  {
   devtools: ['eval-source-map','source-map'],
   entry: [
     'webpack-hot-middleware/client',
@@ -13,6 +13,7 @@ export default {
     path: '/',
     publicPath: '/',
     libraryTarget: 'umd',
+    filename: "bundle.js",
     libraryName: 'PlacesAutocomplete'
   },
   plugins: [
