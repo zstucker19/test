@@ -32,9 +32,6 @@ export default {
       },
       {
         test: /\.json$/,
-        include: [
-          path.join(__dirname, 'node_modules/react-places-autocomplete/dist')
-        ],
         loader: 'json'
        
       },
