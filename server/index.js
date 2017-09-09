@@ -52,7 +52,7 @@ app.use(webpackMiddleware(compiler, {
 
 app.use(webpackHotMiddleware(compiler));
 
-//a
+
 app.use('/', (req, res) => {
   res.sendFile(path.join(__dirname, './index.html'));
 });
