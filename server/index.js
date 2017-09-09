@@ -14,7 +14,7 @@ import db from './models';
 import webpack from 'webpack';
 import webpackMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
-import webpackConfig from '../webpack.config.dev';
+import webpackConfig from '../webpack.config';
 
 import open from 'open';
 import socket from 'socket.io';
@@ -55,6 +55,9 @@ app.use(webpackHotMiddleware(compiler));
 
 app.use('/', (req, res) => {
   res.sendFile(path.join(__dirname, './index.html'));
+});
+app.use('/bundle.js', (req, res) => {
+  res.sendFile(path.join(__dirname, '../bundle.js'));
 });
 
 
